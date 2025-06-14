@@ -1,0 +1,123 @@
+function SubtractSum(n) {
+  const fruits = [
+    "kiwi",
+    "pear",
+    "kiwi",
+    "banana",
+    "melon",
+    "banana",
+    "melon",
+    "pineapple",
+    "apple",
+    "pineapple",
+    "cucumber",
+    "pineapple",
+    "cucumber",
+    "orange",
+    "grape",
+    "orange",
+    "grape",
+    "apple",
+    "grape",
+    "cherry",
+    "pear",
+    "cherry",
+    "pear",
+    "kiwi",
+    "banana",
+    "kiwi",
+    "apple",
+    "melon",
+    "banana",
+    "melon",
+    "pineapple",
+    "melon",
+    "pineapple",
+    "cucumber",
+    "orange",
+    "apple",
+    "orange",
+    "grape",
+    "orange",
+    "grape",
+    "cherry",
+    "pear",
+    "cherry",
+    "pear",
+    "apple",
+    "pear",
+    "kiwi",
+    "banana",
+    "kiwi",
+    "banana",
+    "melon",
+    "pineapple",
+    "melon",
+    "apple",
+    "cucumber",
+    "pineapple",
+    "cucumber",
+    "orange",
+    "cucumber",
+    "orange",
+    "grape",
+    "cherry",
+    "apple",
+    "cherry",
+    "pear",
+    "cherry",
+    "pear",
+    "kiwi",
+    "pear",
+    "kiwi",
+    "banana",
+    "apple",
+    "banana",
+    "melon",
+    "pineapple",
+    "melon",
+    "pineapple",
+    "cucumber",
+    "pineapple",
+    "cucumber",
+    "apple",
+    "grape",
+    "orange",
+    "grape",
+    "cherry",
+    "grape",
+    "cherry",
+    "pear",
+    "cherry",
+    "apple",
+    "kiwi",
+    "banana",
+    "kiwi",
+    "banana",
+    "melon",
+    "banana",
+    "melon",
+    "pineapple",
+    "apple",
+    "pineapple",
+  ];
+  function sum(n) {
+    let num = n.toString();
+    let sum = 0;
+
+    for (let i = 0; i < num.length; i++) {
+      sum += parseInt(num[i]);
+    }
+
+    return sum;
+  }
+
+  while (true) {
+    let digitSum = sum(n);
+    n -= digitSum;
+
+    if (n >= 1 && n <= 100) {
+      return fruits[n - 1];
+    }
+  }
+}
